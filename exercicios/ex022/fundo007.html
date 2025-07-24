@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: relative;
+            height: 96vh; /*esta ocupando 96% da viewport*/
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            /*se eu usasse margim auto ele centralizaria horizontal mas nao vertical por isso vamos usar: colocar o container em uma posiçao relativa(por padrao é isso, n precisa colocar), e o conteudo absoluto, usando absoluto vc pode utilizar as propriedades left e top, podendo ser por px ou %, posso fazer uma tranformação, é eu mecher em qualquer caixa aplicando uma transformaçaõa nela, nesse caso estou movendo ele 50% pra cima e para esquerda*/
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+
+
+    </section>
+    
+</body>
+</html>

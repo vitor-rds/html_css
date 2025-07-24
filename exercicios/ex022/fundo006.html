@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo fixo de tela</title>
+    <style>
+        body {
+            height: 100vh;/*100 da altura da view port*/
+            background: black url(imagens/wallpaper002.jpg) center center / cover no-repeat fixed;
+            
+
+
+            /*background-color: black;
+            background-image: url(imagens/wallpaper002.jpg);
+            background-position: center center;
+            background-repeat: repeat-y;
+            background-size: cover;*/
+            /*ele vai cobrir a tela inteira mesmo q precise dar uma picotadinha na img, ele nao exibe 100% da imagem mas ocupa 100% da view port*/
+            /*background-size: 100% 100%;no lugar de determinar um tamanho coloca 100% que ele vai trabalhar conforme o tamanho da tela que esta sendo exibido essa img, problema q ele vai achatando a img e fica feio, melhor fazer da oçpçao q deixei*/
+            background-attachment: fixed;/*a img fica fixa idependente do tamanho do texto, no caso nao vai se repetir*/
+
+            /*posso usar uma shorthand para isso tudo mas precisa ser exatamente nessa ordem:
+            background color > image > position > repeat > [size] > attachment
+            [] o size é algo q está na regra na documentação mas ainda nao foi aplicado, provavelmente nem vai ser, entao vamos retirar o cover e fazer em outra linha background-size: cover;.
+            funciona se usar o / igual eu fiz no exemplo atual
+
+            ficando assim:
+            
+            background: black url(imagens/wallpaper002.jpg) center center no-repeat cover fixed;
+            
+            */
+
+            
+
+        }
+        main {
+            background-color: white;
+            max-width: 700px; /*vai adptar o conteudo p o tamnho da tela, mesmo q seja pequena ele reorganiza */
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Imagem de fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam quia animi neque tempore ullam eveniet ex dignissimos possimus veritatis consectetur id asperiores expedita mollitia quidem, ducimus facere magnam architecto? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis neque rem quas fugiat molestias odit corporis quis dolor minus quisquam pariatur voluptatum repellendus a ullam velit voluptas, cupiditate tempore labore? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore accusantium architecto odit necessitatibus, voluptate error sequi veniam at ratione in alias harum quos quae tempora quis soluta pariatur ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam quia animi neque tempore ullam eveniet ex dignissimos possimus veritatis consectetur id asperiores expedita mollitia quidem, ducimus facere magnam architecto? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis neque rem quas fugiat molestias odit corporis quis dolor minus quisquam pariatur voluptatum repellendus a ullam velit voluptas, cupiditate tempore labore? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore accusantium architecto odit necessitatibus, voluptate error sequi veniam at ratione in alias harum quos quae tempora quis soluta pariatur ducimus <br>
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam quia animi neque tempore ullam eveniet ex dignissimos possimus veritatis consectetur id asperiores expedita mollitia quidem, ducimus facere magnam architecto? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis neque rem quas fugiat molestias odit corporis quis dolor minus quisquam pariatur voluptatum repellendus a ullam velit voluptas, cupiditate tempore labore? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore accusantium architecto odit necessitatibus, voluptate error sequi veniam at ratione in alias harum quos quae tempora quis soluta pariatur ducimus <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam quia animi neque tempore ullam eveniet ex dignissimos possimus veritatis consectetur id asperiores expedita mollitia quidem, ducimus facere magnam architecto? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis neque rem quas fugiat molestias odit corporis quis dolor minus quisquam pariatur volup<br/>
+        <br> repellendus a ullam velit voluptas, cupiditate tempore labore? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore accusantium architecto odit necessitatibus, voluptate error sequi veniam at ratione in alias harum quos quae tempora quis soluta pariatur ducimus
+        </p>
+    </main>
+    
+</body>
+</html>
